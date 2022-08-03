@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hero{
+  background-image: url("./heroImage/excited6.jpg");
+  background-position: top;
+  background-size: cover;
+  filter: brightness(80%);
+}
+
+.appear{
+  display: block;
+}
+.disappear{
+  display: none;
+}
+
+
+.eachPhone{
+  position: relative;
+}
+
+.phone_image{
+  position:relative;
+}
+.price{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgb(250,250,250,.8);
+}
+.bonus{
+  position: absolute;
+  bottom:10px;
+  left: 10px;
+}
+.new_release{
+  position: absolute;
+  top:2px;
+  left:2px;
+  background-color: gold;
+  transform: rotate(-45deg) translate(-25%,-50%);
+  /* transform: translateX(-10%); */
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid;
+  border-color: rgb(196, 47, 47) transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.links{
+  position:relative;
+}
+.links:before{
+  position: absolute;
+  content: "";
+  right:0px;
+  left: 0px;
+  bottom:-25px;
+  height:6px;
+  border-radius: 5px;
+  background-color: "white";
+  /* display:none; */
+  transition: 500ms background ease;
+}
+.links:hover::before{
+  /* display: block; */
+  background-color: rgb(196, 47, 47);
+}
+
+.search::placeholder{
+  color:white
+}
